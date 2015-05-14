@@ -73,7 +73,8 @@ The **magnitude** (suffix **_Mag**) of each of these five three-dimensional sign
   * **Time_BodyAcc_Jerk_Mag**
   * **Time_BodyGyro_Jerk_Mag** 
 
-* Each one of this variables were measure in 10.299 time windows (an average of 343.3 measures per subject).
+Each one of this variables were measure in 10.299 time windows (an average of 343.3 measures per subject).
+
 All variables in the time domain are numeric type, and are normalized and bounded within [-1,1].
 
 **VARIABLES CAPTURED FROM SENSOR SIGNALS (ACCELEROMETER AND GYROSCOPE)**
