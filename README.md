@@ -49,7 +49,9 @@ It is important to note that the original data set contains some features called
 
 Instructions for the project do not specify in detail if *MeanFreq* should be considered, so it is also my opinion that both solutions could be considered correct.
 
-#### *Applying descriptive activity names to name the activities in the data set*
+The resulting data frame has 10.299 rows and 68 columns.
+
+#### *Applying descriptive activity names to name the activities in the data set:*
 For variable **_activity_**, replaces the coded number (1:6) by their descriptive correspondent ('WALKING',...). It uses the file **_activity_labels.txt_** as the source for the codification, as follows:
 
 1. WALKING
@@ -60,13 +62,13 @@ For variable **_activity_**, replaces the coded number (1:6) by their descriptiv
 6. LAYING
 
 
-#### *Labeling the data set with descriptive variable names*
+#### *Labeling the data set with descriptive variable names:*
 For this step, each variable (originally called 'feature') is assigned to the name provided with the original data set (available in **_features.txt_** from that original data set). This was chosen because the names in the original data set were considered sufficiently descriptive. It is important to note that there are typos in the original names (some variables present a "BodyBody" part). In this step these typos are corrected, and replaced by "Body".
 
 A detailed description for the meaning of variable names is given in the code book file (**_CodeBook.md_**).
 
-#### *Creating (from the data set in step 4) an independent tidy data set with the average of each variable for each activity and each subject*
-As asked, data were grouped by subject (30 subjects) and activity (6 types of activities), so there is a total 180 combinations of these variables. Each column represent the average of a variable mean or the average of a variable standard deviation (for a given subject and activity).
+#### *Creating (from the data set in step 4) an independent tidy data set with the average of each variable for each activity and each subject:*
+As asked, data were grouped by subject (30 subjects) and activity (6 types of activities), so there is a total 180 combinations of these variables. Each column represent the average of an original variable mean or the average of an original variable standard deviation (for a given subject and activity).
 
 The resulting tidy data is presented as a data frame with 180 rows and 68 columns.
 
