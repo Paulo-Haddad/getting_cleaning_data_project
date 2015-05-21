@@ -99,7 +99,7 @@ A Fast Fourier Transform (FFT) was applied to some of the time domain signals pr
 
 All 13 variables in the frequency domain are numeric type, and are normalized and bounded within [-1,1].
 
-* **FUNCTIONS APPLIED**
+**FUNCTIONS APPLIED**
 
 For each of the 10.299 sampling windows of the 33 variables presented above (time domain + frequency domain), two statistical parameters were obtained: 
 
@@ -125,72 +125,73 @@ The resulting variable list is (**all numeric variables are presented as an aver
 
 1. **subject**: *ID number for the subject (numeric, 30 values)*
 2. **activity**: *activity performed during the measures (text, 6 values)*
-3. **Freq_BodyAcc_mean_X**: *frequency domain body acceleration in component direction X - average of means (numeric, values between [-1,1])*
-4. **Freq_BodyAcc_mean_Y**: *frequency domain body acceleration in component direction Y - average of means (numeric, values between [-1,1])*
-5. **Freq_BodyAcc_mean_Z**: *frequency domain body acceleration in component direction Z - average of means (numeric, values between [-1,1])*
-6. **Freq_BodyAcc_std_X**: *frequency domain body acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-7. **Freq_BodyAcc_std_Y**: *frequency domain body acceleration in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-8. **Freq_BodyAcc_std_Z**: *frequency domain body acceleration in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-9. **Freq_BodyAcc_Jerk_mean_X**: *frequency domain body acceleration (Jerk signal) in component direction X - average of means (numeric, values between [-1,1])*
-10. **Freq_BodyAcc_Jerk_mean_Y**: *frequency domain body acceleration (Jerk signal) in component direction Y - average of means (numeric, values between [-1,1])*
-11. **Freq_BodyAcc_Jerk_mean_Z**: *frequency domain body acceleration (Jerk signal) in component direction Z - average of means (numeric, values between [-1,1])*
-12. **Freq_BodyAcc_Jerk_std_X**: *frequency domain body acceleration (Jerk signal) in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-13. **Freq_BodyAcc_Jerk_std_Y**: *frequency domain body acceleration (Jerk signal) in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-14. **Freq_BodyAcc_Jerk_std_Z**: *frequency domain body acceleration (Jerk signal) in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-15. **Freq_BodyAcc_Jerk_Mag_mean**: *frequency domain body acceleration (Jerk signal) magnitude - average of means (numeric, values between [-1,1])*
-16. **Freq_BodyAcc_Jerk_Mag_std**: *frequency domain body acceleration (Jerk signal) magnitude - average of the standart deviations (numeric, values between [-1,1])*
-17. **Freq_BodyAcc_Mag_mean**: *frequency domain body acceleration magnitude - average of means (numeric, values between [-1,1])*
-18. **Freq_BodyAcc_Mag_std**: *frequency domain body acceleration magnitude - average of the standart deviations (numeric, values between [-1,1])*
-19. **Freq_BodyGyro_mean_X**: *frequency domain body gyroscope angular velocity in component direction X - average of means (numeric, values between [-1,1])*
-20. **Freq_BodyGyro_mean_Y**: *frequency domain body gyroscope angular velocity in component direction Y - average of means (numeric, values between [-1,1])*
-21. **Freq_BodyGyro_mean_Z**: *frequency domain body gyroscope angular velocity in component direction Z - average of means (numeric, values between [-1,1])*
-22. **Freq_BodyGyro_std_X**: *frequency domain body gyroscope angular velocity in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-23. **Freq_BodyGyro_std_Y**: *frequency domain body gyroscope angular velocity in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-24. **Freq_BodyGyro_std_Z**: *frequency domain body gyroscope angular velocity in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-25. **Freq_BodyGyro_Jerk_Mag_mean**: *frequency domain body gyroscope angular velocity (Jerk Signal) magnitute - average of means (numeric, values between [-1,1])*
-26. **Freq_BodyGyro_Jerk_Mag_std**: *frequency domain body gyroscope angular velocity (Jerk Signal) magnitute - average of the standart deviations (numeric, values between [-1,1])*
-27. **Freq_BodyGyro_Mag_mean**: *frequency domain body gyroscope angular velocity magnitude - average of means (numeric, values between [-1,1])*
-28. **Freq_BodyGyro_Mag_std**: *frequency domain body gyroscope angular velocity magnitude - average of the standart deviations (numeric, values between [-1,1])*
-29. **Time_BodyAcc_mean_X**: *time domain body acceleration in component direction X - average of means (numeric, values between [-1,1])*
-30. **Time_BodyAcc_mean_Y**: *time domain body acceleration in component direction Y - average of means (numeric, values between [-1,1])*
-31. **Time_BodyAcc_mean_Z**: *time domain body acceleration in component direction Z - average of means (numeric, values between [-1,1])*
-32. **Time_BodyAcc_std_X**: *time domain body acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-33. **Time_BodyAcc_std_Y**: *time domain body acceleration in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-34. **Time_BodyAcc_std_Z**: *time domain body acceleration in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-35. **Time_BodyAcc_Jerk_mean_X**: *time domain body acceleration (Jerk Signal) in component direction X - average of means (numeric, values between [-1,1])*
-36. **Time_BodyAcc_Jerk_mean_Y**: *time domain body acceleration (Jerk Signal) in component direction Y - average of means (numeric, values between [-1,1])*
-37. **Time_BodyAcc_Jerk_mean_Z**: *time domain body acceleration (Jerk Signal) in component direction Z - average of means (numeric, values between [-1,1])*
-38. **Time_BodyAcc_Jerk_std_X**: *time domain body acceleration (Jerk Signal) in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-39. **Time_BodyAcc_Jerk_std_Y**: *time domain body acceleration (Jerk Signal) in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-40. **Time_BodyAcc_Jerk_std_Z**: *time domain body acceleration (Jerk Signal) in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-41. **Time_BodyAcc_Jerk_Mag_mean**: *time domain body acceleration (Jerk Signal) magnitute - average of means (numeric, values between [-1,1])*
-42. **Time_BodyAcc_Jerk_Mag_std**: *time domain body acceleration (Jerk Signal) magnitute - average of the standart deviations (numeric, values between [-1,1])*
-43. **Time_BodyAcc_Mag_mean**: *time domain body acceleration magnitude - average of means (numeric, values between [-1,1])*
-44. **Time_BodyAcc_Mag_std**: *time domain body acceleration magnitude - average of the standart deviations (numeric, values between [-1,1])*
-45. **Time_BodyGyro_mean_X**: *time domain body gyroscope angular velocity in component direction X - average of means (numeric, values between [-1,1])*
-46. **Time_BodyGyro_mean_Y**: *time domain body gyroscope angular velocity in component direction Y - average of means (numeric, values between [-1,1])*
-47. **Time_BodyGyro_mean_Z**: *time domain body gyroscope angular velocity in component direction Z - average of means (numeric, values between [-1,1])*
-48. **Time_BodyGyro_std_X**: *time domain body gyroscope angular velocity in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-49. **Time_BodyGyro_std_Y**: *time domain body gyroscope angular velocity in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-50. **Time_BodyGyro_std_Z**: *time domain body gyroscope angular velocity in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-51. **Time_BodyGyro_Jerk_mean_X**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction X - average of means (numeric, values between [-1,1])*
-52. **Time_BodyGyro_Jerk_mean_Y**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Y - average of means (numeric, values between [-1,1])*
-53. **Time_BodyGyro_Jerk_mean_Z**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Z - average of means (numeric, values between [-1,1])*
-54. **Time_BodyGyro_Jerk_std_X**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-55. **Time_BodyGyro_Jerk_std_Y**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-56. **Time_BodyGyro_Jerk_std_Z**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-57. **Time_BodyGyro_Jerk_Mag_mean**: *time domain body gyroscope angular velocity (Jerk Signal) magnitute - average of means (numeric, values between [-1,1])*
-58. **Time_BodyGyro_Jerk_Mag_std**: *time domain body gyroscope angular velocity (Jerk Signal) magnitute - average of the standart deviations (numeric, values between [-1,1])*
-59. **Time_BodyGyro_Mag_mean**: *time domain body gyroscope angular velocity magnitute - average of means (numeric, values between [-1,1])*
-60. **Time_BodyGyro_Mag_std**: *time domain body gyroscope angular velocity magnitute - average of the standart deviations (numeric, values between [-1,1])*
-61. **Time_GravityAcc_mean_X**: *time domain gravity acceleration in component direction X - average of means (numeric, values between [-1,1])*
-62. **Time_GravityAcc_mean_Y**: *time domain gravity acceleration in component direction Y - average of means (numeric, values between [-1,1])*
-63. **Time_GravityAcc_mean_Z**: *time domain gravity acceleration in component direction Z - average of means (numeric, values between [-1,1])*
-64. **Time_GravityAcc_std_X**: *time domain gravity acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
-65. **Time_GravityAcc_std_Y**: *time domain gravity acceleration in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
-66. **Time_GravityAcc_std_Z**: *time domain gravity acceleration in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
-67. **Time_GravityAcc_Mag_mean**: *time domain gravity acceleration magnitute - average of means (numeric, values between [-1,1])*
-68. **Time_GravityAcc_Mag_std**: *time domain gravity acceleration magnitute - average of the standart deviations (numeric, values between [-1,1])*
+3. **Freq_BodyAcc_mean_X**: *frequency domain body acceleration in component direction X - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+4. **Freq_BodyAcc_mean_Y**: *frequency domain body acceleration in component direction Y - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+5. **Freq_BodyAcc_mean_Z**: *frequency domain body acceleration in component direction Z - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+6. **Freq_BodyAcc_std_X**: *for the frequency domain body acceleration in component direction X - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+7. **Freq_BodyAcc_std_Y**: *frequency domain body acceleration in component direction Y - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+8. **Freq_BodyAcc_std_Z**: *frequency domain body acceleration in component direction Z - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+9. **Freq_BodyAcc_Jerk_mean_X**: *frequency domain body acceleration (Jerk signal) in component direction X - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+10. **Freq_BodyAcc_Jerk_mean_Y**: *frequency domain body acceleration (Jerk signal) in component direction Y - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+11. **Freq_BodyAcc_Jerk_mean_Z**: *frequency domain body acceleration (Jerk signal) in component direction Z - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+12. **Freq_BodyAcc_Jerk_std_X**: *frequency domain body acceleration (Jerk signal) in component direction X - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+13. **Freq_BodyAcc_Jerk_std_Y**: *frequency domain body acceleration (Jerk signal) in component direction Y - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+14. **Freq_BodyAcc_Jerk_std_Z**: *frequency domain body acceleration (Jerk signal) in component direction Z - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+15. **Freq_BodyAcc_Jerk_Mag_mean**: *frequency domain body acceleration (Jerk signal) magnitude - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+16. **Freq_BodyAcc_Jerk_Mag_std**: *frequency domain body acceleration (Jerk signal) magnitude - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+17. **Freq_BodyAcc_Mag_mean**: *frequency domain body acceleration magnitude - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+18. **Freq_BodyAcc_Mag_std**: *frequency domain body acceleration magnitude - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+19. **Freq_BodyGyro_mean_X**: *frequency domain body gyroscope angular velocity in component direction X - average of means (numeric, unit: radians/sec, values between [-1,1])*
+20. **Freq_BodyGyro_mean_Y**: *frequency domain body gyroscope angular velocity in component direction Y - average of means (numeric, unit: radians/sec, values between [-1,1])*
+21. **Freq_BodyGyro_mean_Z**: *frequency domain body gyroscope angular velocity in component direction Z - average of means (numeric, unit: radians/sec, values between [-1,1])*
+22. **Freq_BodyGyro_std_X**: *frequency domain body gyroscope angular velocity in component direction X - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+23. **Freq_BodyGyro_std_Y**: *frequency domain body gyroscope angular velocity in component direction Y - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+24. **Freq_BodyGyro_std_Z**: *frequency domain body gyroscope angular velocity in component direction Z - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+25. **Freq_BodyGyro_Jerk_Mag_mean**: *frequency domain body gyroscope angular velocity (Jerk Signal) magnitute - average of means (numeric, unit: radians/sec, values between [-1,1])*
+26. **Freq_BodyGyro_Jerk_Mag_std**: *frequency domain body gyroscope angular velocity (Jerk Signal) magnitute - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+27. **Freq_BodyGyro_Mag_mean**: *frequency domain body gyroscope angular velocity magnitude - average of means (numeric, unit: radians/sec, values between [-1,1])*
+28. **Freq_BodyGyro_Mag_std**: *frequency domain body gyroscope angular velocity magnitude - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+29. **Time_BodyAcc_mean_X**: *time domain body acceleration in component direction X - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+30. **Time_BodyAcc_mean_Y**: *time domain body acceleration in component direction Y - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+31. **Time_BodyAcc_mean_Z**: *time domain body acceleration in component direction Z - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+32. **Time_BodyAcc_std_X**: *time domain body acceleration in component direction X - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+33. **Time_BodyAcc_std_Y**: *time domain body acceleration in component direction Y - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+34. **Time_BodyAcc_std_Z**: *time domain body acceleration in component direction Z - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+35. **Time_BodyAcc_Jerk_mean_X**: *time domain body acceleration (Jerk Signal) in component direction X - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+36. **Time_BodyAcc_Jerk_mean_Y**: *time domain body acceleration (Jerk Signal) in component direction Y - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+37. **Time_BodyAcc_Jerk_mean_Z**: *time domain body acceleration (Jerk Signal) in component direction Z - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+38. **Time_BodyAcc_Jerk_std_X**: *time domain body acceleration (Jerk Signal) in component direction X - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+39. **Time_BodyAcc_Jerk_std_Y**: *time domain body acceleration (Jerk Signal) in component direction Y - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+40. **Time_BodyAcc_Jerk_std_Z**: *time domain body acceleration (Jerk Signal) in component direction Z - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+41. **Time_BodyAcc_Jerk_Mag_mean**: *time domain body acceleration (Jerk Signal) magnitute - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+42. **Time_BodyAcc_Jerk_Mag_std**: *time domain body acceleration (Jerk Signal) magnitute - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+43. **Time_BodyAcc_Mag_mean**: *time domain body acceleration magnitude - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+44. **Time_BodyAcc_Mag_std**: *time domain body acceleration magnitude - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+45. **Time_BodyGyro_mean_X**: *time domain body gyroscope angular velocity in component direction X - average of means (numeric, unit: radians/sec, values between [-1,1])*
+46. **Time_BodyGyro_mean_Y**: *time domain body gyroscope angular velocity in component direction Y - average of means (numeric, unit: radians/sec, values between [-1,1])*
+47. **Time_BodyGyro_mean_Z**: *time domain body gyroscope angular velocity in component direction Z - average of means (numeric, unit: radians/sec, values between [-1,1])*
+48. **Time_BodyGyro_std_X**: *time domain body gyroscope angular velocity in component direction X - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+49. **Time_BodyGyro_std_Y**: *time domain body gyroscope angular velocity in component direction Y - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+50. **Time_BodyGyro_std_Z**: *time domain body gyroscope angular velocity in component direction Z - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+51. **Time_BodyGyro_Jerk_mean_X**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction X - average of means (numeric, unit: radians/sec, values between [-1,1])*
+52. **Time_BodyGyro_Jerk_mean_Y**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Y - average of means (numeric, unit: radians/sec, values between [-1,1])*
+53. **Time_BodyGyro_Jerk_mean_Z**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Z - average of means (numeric, unit: radians/sec, values between [-1,1])*
+54. **Time_BodyGyro_Jerk_std_X**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction X - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+55. **Time_BodyGyro_Jerk_std_Y**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Y - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+56. **Time_BodyGyro_Jerk_std_Z**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Z - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+57. **Time_BodyGyro_Jerk_Mag_mean**: *time domain body gyroscope angular velocity (Jerk Signal) magnitute - average of means (numeric, unit: radians/sec, values between [-1,1])*
+58. **Time_BodyGyro_Jerk_Mag_std**: *time domain body gyroscope angular velocity (Jerk Signal) magnitute - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+59. **Time_BodyGyro_Mag_mean**: *time domain body gyroscope angular velocity magnitute - average of means (numeric, unit: radians/sec, values between [-1,1])*
+60. **Time_BodyGyro_Mag_std**: *time domain body gyroscope angular velocity magnitute - average of the standart deviations (numeric, unit: radians/sec, values between [-1,1])*
+61. **Time_GravityAcc_mean_X**: *time domain gravity acceleration in component direction X - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+62. **Time_GravityAcc_mean_Y**: *time domain gravity acceleration in component direction Y - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+63. **Time_GravityAcc_mean_Z**: *time domain gravity acceleration in component direction Z - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+64. **Time_GravityAcc_std_X**: *time domain gravity acceleration in component direction X - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+65. **Time_GravityAcc_std_Y**: *time domain gravity acceleration in component direction Y - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+66. **Time_GravityAcc_std_Z**: *time domain gravity acceleration in component direction Z - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+67. **Time_GravityAcc_Mag_mean**: *time domain gravity acceleration magnitute - average of means (numeric, unit: gravity units (g), values between [-1,1])*
+68. **Time_GravityAcc_Mag_std**: *time domain gravity acceleration magnitute - average of the standart deviations (numeric, unit: gravity units (g), values between [-1,1])*
+
 
 
 
