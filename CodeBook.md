@@ -14,7 +14,7 @@ activityrecognition@smartlab.ws
 
 www.smartlab.ws
 
-*Experiment details*
+*Study Design*
 =====
 This script prepares tidy data that can be used for later analysis. It uses data collected from the accelerometers from the Samsung Galaxy S smartphone, in a study carried out to develop the most advanced algorithms to attract new users in weareble computing.
 
@@ -75,11 +75,9 @@ The **magnitude** (suffix **_Mag**) of each of these five three-dimensional sign
   * **Time_BodyAcc_Jerk_Mag**
   * **Time_BodyGyro_Jerk_Mag** 
 
-Each one of this variables were measure in 10.299 time windows (an average of 343.3 measures per subject).
+Each one of this 20 variables were sampled in 10.299 time windows (an average of 343.3 windows per subject).
 
-All variables in the time domain are numeric type, and are normalized and bounded within [-1,1].
-
-**VARIABLES CAPTURED FROM SENSOR SIGNALS (ACCELEROMETER AND GYROSCOPE)**
+All 20 variables in the time domain are numeric type, and are normalized and bounded within [-1,1].
 
 **FREQUENCY DOMAIN VARIABLES**
 
@@ -99,93 +97,102 @@ A Fast Fourier Transform (FFT) was applied to some of the time domain signals pr
   * **Freq_BodyAcc_Jerk_Mag**
   * **Freq_BodyGyro_Jerk_Mag**
 
-All variables in the frequency domain are numeric type, and are normalized and bounded within [-1,1].
+All 13 variables in the frequency domain are numeric type, and are normalized and bounded within [-1,1].
 
-* **FUNCTIONS APPLIED
+* **FUNCTIONS APPLIED**
 
-For each of the 33 variables presented above (both in the time domain, as in the frequency domain), two statistical parameters were obtained: 
+For each of the 10.299 sampling windows of the 33 variables presented above (time domain + frequency domain), two statistical parameters were obtained: 
 
 **mean**: Mean value
+
 **std**: Standard deviation
 
-There are indicated in each variable by the suffix **_mean** and **_std**, respectly.
+They are indicated in each variable by the suffix **_mean** and **_std**, respectly.
+
 The combination of 33 variables and the 2 functions, generates the total 66 observed numerical variables in the tidy data set.
 
-* **TIDY DATA SET FROM run_analysis.R
+* **Code Book for the tidy data set of run_analysis.R**
 
 All variables presented above are presented in the tidy_data variable after run_analysis.R is executed.
-The results of each of the 66 numeric variables from the accelerometer and gyroscope are grouped by subject and activity.
-This grouping is done by an average, meaning that the means and standard deviations calculated for each of the 33 original variables are averaged themselves.
-The resulting variable list is:
+The results of each of the 66 numeric variables from the accelerometer and gyroscope **are grouped by subject and activity**.
+This grouping is done by an **average**, meaning that the means and standard deviations calculated for each of the 66 original variables are averaged themselves.
 
-1. subject
-2. activity
-3. Freq_BodyAcc_mean_X
-4. Freq_BodyAcc_mean_Y
-5. Freq_BodyAcc_mean_Z
-6. Freq_BodyAcc_std_X
-7. Freq_BodyAcc_std_Y
-8. Freq_BodyAcc_std_Z
-9. Freq_BodyAcc_Jerk_mean_X
-10. Freq_BodyAcc_Jerk_mean_Y
-11. Freq_BodyAcc_Jerk_mean_Z
-12. Freq_BodyAcc_Jerk_std_X
-13. Freq_BodyAcc_Jerk_std_Y
-14. Freq_BodyAcc_Jerk_std_Z
-15. Freq_BodyAcc_Jerk_Mag_mean
-16. Freq_BodyAcc_Jerk_Mag_std
-17. Freq_BodyAcc_Mag_mean
-18. Freq_BodyAcc_Mag_std
-19. Freq_BodyGyro_mean_X
-20. Freq_BodyGyro_mean_Y
-21. Freq_BodyGyro_mean_Z
-22. Freq_BodyGyro_std_X
-23. Freq_BodyGyro_std_Y
-24. Freq_BodyGyro_std_Z
-25. Freq_BodyGyro_Jerk_Mag_mean
-26. Freq_BodyGyro_Jerk_Mag_std
-27. Freq_BodyGyro_Mag_mean
-28. Freq_BodyGyro_Mag_std
-29. Time_BodyAcc_mean_X
-30. Time_BodyAcc_mean_Y
-31. Time_BodyAcc_mean_Z
-32. Time_BodyAcc_std_X
-33. Time_BodyAcc_std_Y
-34. Time_BodyAcc_std_Z
-35. Time_BodyAcc_Jerk_mean_X
-36. Time_BodyAcc_Jerk_mean_Y
-37. Time_BodyAcc_Jerk_mean_Z
-38. Time_BodyAcc_Jerk_std_X
-39. Time_BodyAcc_Jerk_std_Y
-40. Time_BodyAcc_Jerk_std_Z
-41. Time_BodyAcc_Jerk_Mag_mean
-42. Time_BodyAcc_Jerk_Mag_std
-43. Time_BodyAcc_Mag_mean
-44. Time_BodyAcc_Mag_std
-45. Time_BodyGyro_mean_X
-46. Time_BodyGyro_mean_Y
-47. Time_BodyGyro_mean_Z
-48. Time_BodyGyro_std_X
-49. Time_BodyGyro_std_Y
-50. Time_BodyGyro_std_Z
-51. Time_BodyGyro_Jerk_mean_X
-52. Time_BodyGyro_Jerk_mean_Y
-53. Time_BodyGyro_Jerk_mean_Z
-54. Time_BodyGyro_Jerk_std_X
-55. Time_BodyGyro_Jerk_std_Y
-56. Time_BodyGyro_Jerk_std_Z
-57. Time_BodyGyro_Jerk_Mag_mean
-58. Time_BodyGyro_Jerk_Mag_std
-59. Time_BodyGyro_Mag_mean
-60. Time_BodyGyro_Mag_std
-61. Time_GravityAcc_mean_X
-62. Time_GravityAcc_mean_Y
-63. Time_GravityAcc_mean_Z
-64. Time_GravityAcc_std_X
-65. Time_GravityAcc_std_Y
-66. Time_GravityAcc_std_Z
-67. Time_GravityAcc_Mag_mean
-68. Time_GravityAcc_Mag_std
+The resulting data set is considered tidy because it has the following characteristics:
+* Each variable measured is in one column
+* Each different observation of a variable is in a different row
+
+The resulting variable list is (**all numeric variables are presented as an average for the subject in a given activity**):
+
+1. **subject**: *ID number for the subject (numeric, 30 values)*
+2. **activity**: *activity performed during the measures (text, 6 values)*
+3. **Freq_BodyAcc_mean_X**: *frequency domain body acceleration in component direction X - average of means (numeric, values between [-1,1])*
+4. **Freq_BodyAcc_mean_Y**: *frequency domain body acceleration in component direction Y - average of means (numeric, values between [-1,1])*
+5. **Freq_BodyAcc_mean_Z**: *frequency domain body acceleration in component direction Z - average of means (numeric, values between [-1,1])*
+6. **Freq_BodyAcc_std_X**: *for the frequency domain body acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+7. **Freq_BodyAcc_std_Y**: *frequency domain body acceleration in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+8. **Freq_BodyAcc_std_Z**: *frequency domain body acceleration in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+9. **Freq_BodyAcc_Jerk_mean_X**: *frequency domain body acceleration (Jerk signal) in component direction X - average of means (numeric, values between [-1,1])*
+10. **Freq_BodyAcc_Jerk_mean_Y**: *frequency domain body acceleration (Jerk signal) in component direction Y - average of means (numeric, values between [-1,1])*
+11. **Freq_BodyAcc_Jerk_mean_Z**: *frequency domain body acceleration (Jerk signal) in component direction Z - average of means (numeric, values between [-1,1])*
+12. **Freq_BodyAcc_Jerk_std_X**: *frequency domain body acceleration (Jerk signal) in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+13. **Freq_BodyAcc_Jerk_std_Y**: *frequency domain body acceleration (Jerk signal) in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+14. **Freq_BodyAcc_Jerk_std_Z**: *frequency domain body acceleration (Jerk signal) in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+15. **Freq_BodyAcc_Jerk_Mag_mean**: *frequency domain body acceleration (Jerk signal) magnitude - average of means (numeric, values between [-1,1])*
+16. **Freq_BodyAcc_Jerk_Mag_std**: *frequency domain body acceleration (Jerk signal) magnitude - average of the standart deviations (numeric, values between [-1,1])*
+17. **Freq_BodyAcc_Mag_mean**: *frequency domain body acceleration magnitude - average of means (numeric, values between [-1,1])*
+18. **Freq_BodyAcc_Mag_std**: *frequency domain body acceleration magnitude - average of the standart deviations (numeric, values between [-1,1])*
+19. **Freq_BodyGyro_mean_X**: *frequency domain body gyroscope angular velocity in component direction X - average of means (numeric, values between [-1,1])*
+20. **Freq_BodyGyro_mean_Y**: *frequency domain body gyroscope angular velocity in component direction Y - average of means (numeric, values between [-1,1])*
+21. **Freq_BodyGyro_mean_Z**: *frequency domain body gyroscope angular velocity in component direction Z - average of means (numeric, values between [-1,1])*
+22. **Freq_BodyGyro_std_X**: *frequency domain body gyroscope angular velocity in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+23. **Freq_BodyGyro_std_Y**: *frequency domain body gyroscope angular velocity in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+24. **Freq_BodyGyro_std_Z**: *frequency domain body gyroscope angular velocity in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+25. **Freq_BodyGyro_Jerk_Mag_mean**: *frequency domain body gyroscope angular velocity (Jerk Signal) magnitute - average of means (numeric, values between [-1,1])*
+26. **Freq_BodyGyro_Jerk_Mag_std**: *frequency domain body gyroscope angular velocity (Jerk Signal) magnitute - average of the standart deviations (numeric, values between [-1,1])*
+27. **Freq_BodyGyro_Mag_mean**: *frequency domain body gyroscope angular velocity magnitude - average of means (numeric, values between [-1,1])*
+28. **Freq_BodyGyro_Mag_std**: *frequency domain body gyroscope angular velocity magnitude - average of the standart deviations (numeric, values between [-1,1])*
+29. **Time_BodyAcc_mean_X**: *time domain body acceleration in component direction X - average of means (numeric, values between [-1,1])*
+30. **Time_BodyAcc_mean_Y**: *time domain body acceleration in component direction Y - average of means (numeric, values between [-1,1])*
+31. **Time_BodyAcc_mean_Z**: *time domain body acceleration in component direction Z - average of means (numeric, values between [-1,1])*
+32. **Time_BodyAcc_std_X**: *time domain body acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+33. **Time_BodyAcc_std_Y**: *time domain body acceleration in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+34. **Time_BodyAcc_std_Z**: *time domain body acceleration in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+35. **Time_BodyAcc_Jerk_mean_X**: *time domain body acceleration (Jerk Signal) in component direction X - average of means (numeric, values between [-1,1])*
+36. **Time_BodyAcc_Jerk_mean_Y**: *time domain body acceleration (Jerk Signal) in component direction Y - average of means (numeric, values between [-1,1])*
+37. **Time_BodyAcc_Jerk_mean_Z**: *time domain body acceleration (Jerk Signal) in component direction Z - average of means (numeric, values between [-1,1])*
+38. **Time_BodyAcc_Jerk_std_X**: *time domain body acceleration (Jerk Signal) in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+39. **Time_BodyAcc_Jerk_std_Y**: *time domain body acceleration (Jerk Signal) in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+40. **Time_BodyAcc_Jerk_std_Z**: *time domain body acceleration (Jerk Signal) in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+41. **Time_BodyAcc_Jerk_Mag_mean**: *time domain body acceleration (Jerk Signal) magnitute - average of means (numeric, values between [-1,1])*
+42. **Time_BodyAcc_Jerk_Mag_std**: *time domain body acceleration (Jerk Signal) magnitute - average of the standart deviations (numeric, values between [-1,1])*
+43. **Time_BodyAcc_Mag_mean**: *time domain body acceleration magnitude - average of means (numeric, values between [-1,1])*
+44. **Time_BodyAcc_Mag_std**: *time domain body acceleration magnitude - average of the standart deviations (numeric, values between [-1,1])*
+45. **Time_BodyGyro_mean_X**: *time domain body gyroscope angular velocity in component direction X - average of means (numeric, values between [-1,1])*
+46. **Time_BodyGyro_mean_Y**: *time domain body gyroscope angular velocity in component direction Y - average of means (numeric, values between [-1,1])*
+47. **Time_BodyGyro_mean_Z**: *time domain body gyroscope angular velocity in component direction Z - average of means (numeric, values between [-1,1])*
+48. **Time_BodyGyro_std_X**: *time domain body gyroscope angular velocity in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+49. **Time_BodyGyro_std_Y**: *time domain body gyroscope angular velocity in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+50. **Time_BodyGyro_std_Z**: *time domain body gyroscope angular velocity in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+51. **Time_BodyGyro_Jerk_mean_X**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction X - average of means (numeric, values between [-1,1])*
+52. **Time_BodyGyro_Jerk_mean_Y**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Y - average of means (numeric, values between [-1,1])*
+53. **Time_BodyGyro_Jerk_mean_Z**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Z - average of means (numeric, values between [-1,1])*
+54. **Time_BodyGyro_Jerk_std_X**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+55. **Time_BodyGyro_Jerk_std_Y**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+56. **Time_BodyGyro_Jerk_std_Z**: *time domain body gyroscope angular velocity (Jerk Signal) in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+57. **Time_BodyGyro_Jerk_Mag_mean**: *time domain body gyroscope angular velocity (Jerk Signal) magnitute - average of means (numeric, values between [-1,1])*
+58. **Time_BodyGyro_Jerk_Mag_std**: *time domain body gyroscope angular velocity (Jerk Signal) magnitute - average of the standart deviations (numeric, values between [-1,1])*
+59. **Time_BodyGyro_Mag_mean**: *time domain body gyroscope angular velocity magnitute - average of means (numeric, values between [-1,1])*
+60. **Time_BodyGyro_Mag_std**: *time domain body gyroscope angular velocity magnitute - average of the standart deviations (numeric, values between [-1,1])*
+61. **Time_GravityAcc_mean_X**: *time domain gravity acceleration in component direction X - average of means (numeric, values between [-1,1])*
+62. **Time_GravityAcc_mean_Y**: *time domain gravity acceleration in component direction Y - average of means (numeric, values between [-1,1])*
+63. **Time_GravityAcc_mean_Z**: *time domain gravity acceleration in component direction Z - average of means (numeric, values between [-1,1])*
+64. **Time_GravityAcc_std_X**: *time domain gravity acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+65. **Time_GravityAcc_std_Y**: *time domain gravity acceleration in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
+66. **Time_GravityAcc_std_Z**: *time domain gravity acceleration in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
+67. **Time_GravityAcc_Mag_mean**: *time domain gravity acceleration magnitute - average of means (numeric, values between [-1,1])*
+68. **Time_GravityAcc_Mag_std**: *time domain gravity acceleration magnitute - average of the standart deviations (numeric, values between [-1,1])*
+
+
 
 
 *License for original data*
