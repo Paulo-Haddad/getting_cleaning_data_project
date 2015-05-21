@@ -1,6 +1,6 @@
 Code Book for tidy data exported by *run_analysis.R*
 ==================================================================
-*This script is based on original data provided by:*
+*This script works with original data provided by:*
 
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 
