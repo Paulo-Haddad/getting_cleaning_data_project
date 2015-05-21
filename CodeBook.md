@@ -111,11 +111,11 @@ They are indicated in each variable by the suffix **_mean** and **_std**, respec
 
 The combination of 33 variables and the 2 functions, generates the total 66 observed numerical variables in the tidy data set.
 
-* **Code Book for the tidy data set of run_analysis.R**
-
+*Code Book for the tidy data set of run_analysis.R*
+=================
 All variables presented above are presented in the tidy_data variable after run_analysis.R is executed.
 The results of each of the 66 numeric variables from the accelerometer and gyroscope **are grouped by subject and activity**.
-This grouping is done by an **average**, meaning that the means and standard deviations calculated for each of the 66 original variables are averaged themselves.
+This grouping is done by an **average**, meaning that the **means** and **standard deviations** calculated for each of the 33 original variables are averaged themselves.
 
 The resulting data set is considered tidy because it has the following characteristics:
 * Each variable measured is in one column
@@ -128,7 +128,7 @@ The resulting variable list is (**all numeric variables are presented as an aver
 3. **Freq_BodyAcc_mean_X**: *frequency domain body acceleration in component direction X - average of means (numeric, values between [-1,1])*
 4. **Freq_BodyAcc_mean_Y**: *frequency domain body acceleration in component direction Y - average of means (numeric, values between [-1,1])*
 5. **Freq_BodyAcc_mean_Z**: *frequency domain body acceleration in component direction Z - average of means (numeric, values between [-1,1])*
-6. **Freq_BodyAcc_std_X**: *for the frequency domain body acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
+6. **Freq_BodyAcc_std_X**: *frequency domain body acceleration in component direction X - average of the standart deviations (numeric, values between [-1,1])*
 7. **Freq_BodyAcc_std_Y**: *frequency domain body acceleration in component direction Y - average of the standart deviations (numeric, values between [-1,1])*
 8. **Freq_BodyAcc_std_Z**: *frequency domain body acceleration in component direction Z - average of the standart deviations (numeric, values between [-1,1])*
 9. **Freq_BodyAcc_Jerk_mean_X**: *frequency domain body acceleration (Jerk signal) in component direction X - average of means (numeric, values between [-1,1])*
